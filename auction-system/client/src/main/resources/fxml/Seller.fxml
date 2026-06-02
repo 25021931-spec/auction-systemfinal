@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.auction.controller.SellerController"
+            style="-fx-background-color: #0f1923;"
+            prefWidth="960" prefHeight="660">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="14"
+              style="-fx-background-color: #1a2d3d; -fx-padding: 14 20 14 20;">
+            <Text text="AUCTION SYSTEM"
+                  style="-fx-font-size: 18; -fx-fill: #e8b84b; -fx-font-weight: bold;"/>
+            <Text text="Seller Dashboard" style="-fx-font-size: 14; -fx-fill: #7a9ab8;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="userLabel" style="-fx-text-fill: #7a9ab8; -fx-font-size: 13;"/>
+            <Button text="Dang xuat" onAction="#handleLogout"
+                    style="-fx-background-color: #7a2d2d; -fx-text-fill: white;
+                           -fx-background-radius: 6; -fx-cursor: hand; -fx-padding: 6 14 6 14;"/>
+        </HBox>
+    </top>
+    <center>
+        <HBox spacing="0">
+            <VBox spacing="12" minWidth="320" maxWidth="340"
+                  style="-fx-background-color: #131f2b; -fx-padding: 20;
+                         -fx-border-color: #1e3347; -fx-border-width: 0 1 0 0;">
+                <Label text="TAO PHIEN DAU GIA MOI"
+                       style="-fx-text-fill: #e8b84b; -fx-font-size: 14; -fx-font-weight: bold;"/>
+                <VBox spacing="4">
+                    <Label text="Ten san pham" style="-fx-text-fill: #7a9ab8; -fx-font-size: 11;"/>
+                    <TextField fx:id="itemNameField" promptText="VD: iPhone 15 Pro"
+                               style="-fx-background-color: #1a2d3d; -fx-text-fill: white;
+                                      -fx-border-color: #2d4a63; -fx-border-radius: 6;
+                                      -fx-background-radius: 6; -fx-padding: 9;"/>
+                </VBox>
+                <VBox spacing="4">
+                    <Label text="Mo ta" style="-fx-text-fill: #7a9ab8; -fx-font-size: 11;"/>
+                    <TextArea fx:id="itemDescField" promptText="Mo ta san pham..."
+                              prefRowCount="3" wrapText="true"
+                              style="-fx-background-color: #1a2d3d; -fx-text-fill: white;
+                                     -fx-border-color: #2d4a63; -fx-border-radius: 6;
+                                     -fx-background-radius: 6; -fx-padding: 9;"/>
+                </VBox>
+                <HBox spacing="8">
+                    <VBox spacing="4" HBox.hgrow="ALWAYS">
+                        <Label text="Gia khoi diem" style="-fx-text-fill: #7a9ab8; -fx-font-size: 11;"/>
+                        <TextField fx:id="startPriceField" promptText="100000"
+                                   style="-fx-background-color: #1a2d3d; -fx-text-fill: white;
+                                          -fx-border-color: #2d4a63; -fx-border-radius: 6;
+                                          -fx-background-radius: 6; -fx-padding: 9;"/>
+                    </VBox>
+                    <VBox spacing="4" HBox.hgrow="ALWAYS">
+                        <Label text="Danh muc" style="-fx-text-fill: #7a9ab8; -fx-font-size: 11;"/>
+                        <ComboBox fx:id="categoryCombo" maxWidth="Infinity"
+                                  style="-fx-background-color: #1a2d3d;
+                                         -fx-border-color: #2d4a63; -fx-border-radius: 6;
+                                         -fx-background-radius: 6;"/>
+                    </VBox>
+                </HBox>
+                <VBox spacing="4">
+                    <Label text="Ngay ket thuc" style="-fx-text-fill: #7a9ab8; -fx-font-size: 11;"/>
+                    <DatePicker fx:id="endDatePicker" maxWidth="Infinity"/>
+                </VBox>
+                <VBox spacing="4">
+                    <Label text="Gio ket thuc (HH:MM)" style="-fx-text-fill: #7a9ab8; -fx-font-size: 11;"/>
+                    <TextField fx:id="endTimeField" promptText="20:00"
+                               style="-fx-background-color: #1a2d3d; -fx-text-fill: white;
+                                      -fx-border-color: #2d4a63; -fx-border-radius: 6;
+                                      -fx-background-radius: 6; -fx-padding: 9;"/>
+                </VBox>
+                <Button text="TAO PHIEN DAU GIA" onAction="#handleCreateAuction"
+                        maxWidth="Infinity"
+                        style="-fx-background-color: #2d7a4f; -fx-text-fill: white;
+                               -fx-font-weight: bold; -fx-font-size: 14; -fx-padding: 12;
+                               -fx-background-radius: 6; -fx-cursor: hand;"/>
+                <Label fx:id="messageLabel" text="" wrapText="true"
+                       style="-fx-font-size: 12;"/>
+            </VBox>
+            <VBox spacing="12" HBox.hgrow="ALWAYS" style="-fx-padding: 20;">
+                <Label text="CAC PHIEN CUA TOI"
+                       style="-fx-text-fill: #c8d8e8; -fx-font-size: 14; -fx-font-weight: bold;"/>
+                <TableView fx:id="myAuctionsTable" VBox.vgrow="ALWAYS"
+                           style="-fx-background-color: #1a2d3d; -fx-border-color: #2d4a63;">
+                    <columns>
+                        <TableColumn fx:id="idCol" text="ID" prefWidth="60"/>
+                        <TableColumn fx:id="nameCol" text="San pham" prefWidth="250"/>
+                        <TableColumn fx:id="priceCol" text="Gia cao nhat" prefWidth="140"/>
+                        <TableColumn fx:id="statusCol" text="Trang thai" prefWidth="120"/>
+                    </columns>
+                    <placeholder>
+                        <Label text="Chua co phien nao" style="-fx-text-fill: #4a6a83;"/>
+                    </placeholder>
+                </TableView>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>
