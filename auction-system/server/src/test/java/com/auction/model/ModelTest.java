@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Tests OOP hierarchy: Inheritance, Polymorphism, Encapsulation.
+ * Tests OOP hierarchy: kế thừa , da hình , đóng gói
  */
 class ModelTest {
 
