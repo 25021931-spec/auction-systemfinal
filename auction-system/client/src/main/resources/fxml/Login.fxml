@@ -99,6 +99,4 @@
         </Tab>
     </TabPane>
 
-    <Label text="Admin mac dinh: admin / admin123"
-           style="-fx-text-fill: #3d5a73; -fx-font-size: 11; -fx-padding: 8 0 8 0;"/>
 </VBox>
