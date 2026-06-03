@@ -30,18 +30,18 @@
         <Tab text="Dang Nhap">
             <VBox alignment="CENTER" spacing="14"
                   style="-fx-background-color: #0f1923; -fx-padding: 36 60 36 60;">
-                <Label text="Chao mung tro lai"
+                <Label text="Chào mừng trở lại"
                        style="-fx-text-fill: #c8d8e8; -fx-font-size: 15;"/>
                 <VBox spacing="5">
-                    <Label text="Ten dang nhap" style="-fx-text-fill: #7a9ab8; -fx-font-size: 12;"/>
-                    <TextField fx:id="loginUsernameField" promptText="Nhap ten dang nhap"
+                    <Label text="Tên đăng nhập" style="-fx-text-fill: #7a9ab8; -fx-font-size: 12;"/>
+                    <TextField fx:id="loginUsernameField" promptText="Nhập ten đăng nhập"
                                style="-fx-background-color: #1a2d3d; -fx-text-fill: white;
                                       -fx-border-color: #2d4a63; -fx-border-radius: 6;
                                       -fx-background-radius: 6; -fx-padding: 10; -fx-font-size: 13;"/>
                 </VBox>
                 <VBox spacing="5">
-                    <Label text="Mat khau" style="-fx-text-fill: #7a9ab8; -fx-font-size: 12;"/>
-                    <PasswordField fx:id="loginPasswordField" promptText="Nhap mat khau"
+                    <Label text="Mật khẩu" style="-fx-text-fill: #7a9ab8; -fx-font-size: 12;"/>
+                    <PasswordField fx:id="loginPasswordField" promptText="Nhập mật khẩu"
                                    style="-fx-background-color: #1a2d3d; -fx-text-fill: white;
                                           -fx-border-color: #2d4a63; -fx-border-radius: 6;
                                           -fx-background-radius: 6; -fx-padding: 10; -fx-font-size: 13;"/>
@@ -59,18 +59,18 @@
         <Tab text="Dang Ky">
             <VBox alignment="CENTER" spacing="12"
                   style="-fx-background-color: #0f1923; -fx-padding: 28 60 28 60;">
-                <Label text="Tao tai khoan moi"
+                <Label text="Tạo tài khoản mới"
                        style="-fx-text-fill: #c8d8e8; -fx-font-size: 15;"/>
                 <VBox spacing="5">
-                    <Label text="Ten dang nhap" style="-fx-text-fill: #7a9ab8; -fx-font-size: 12;"/>
-                    <TextField fx:id="regUsernameField" promptText="Toi thieu 3 ky tu"
+                    <Label text="Tên đăng nhập" style="-fx-text-fill: #7a9ab8; -fx-font-size: 12;"/>
+                    <TextField fx:id="regUsernameField" promptText= "Tối thiểu 3 kí tự"
                                style="-fx-background-color: #1a2d3d; -fx-text-fill: white;
                                       -fx-border-color: #2d4a63; -fx-border-radius: 6;
                                       -fx-background-radius: 6; -fx-padding: 10;"/>
                 </VBox>
                 <VBox spacing="5">
                     <Label text="Mat khau" style="-fx-text-fill: #7a9ab8; -fx-font-size: 12;"/>
-                    <PasswordField fx:id="regPasswordField" promptText="Toi thieu 6 ky tu"
+                    <PasswordField fx:id="regPasswordField" promptText="Tối thiểu 3 kí tự"
                                    style="-fx-background-color: #1a2d3d; -fx-text-fill: white;
                                           -fx-border-color: #2d4a63; -fx-border-radius: 6;
                                           -fx-background-radius: 6; -fx-padding: 10;"/>
