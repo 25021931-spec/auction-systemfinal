@@ -1,34 +1,28 @@
 
-# 🔨 Hệ Thống Đấu Giá Trực Tuyến
+ 🔨 Hệ Thống Đấu Giá Trực Tuyến
 **Bài tập lớn – Lập trình Nâng cao**
 
 ---
-
-- [Yêu cầu hệ thống](#yêu-cầu-hệ-thống)
-- [Cách chạy nhanh](#cách-chạy-nhanh)
-- [Cấu trúc project](#cấu-trúc-project)
-- [Kiến trúc hệ thống](#kiến-trúc-hệ-thống)
-- [Design Patterns đã áp dụng](#design-patterns-đã-áp-dụng)
-- [Tính năng](#tính-năng)
-- [Chạy Unit Tests](#chạy-unit-tests)
-- [CI/CD](#cicd)
-- [Tài khoản mặc định](#tài-khoản-mặc-định)
+- [Yêu cầu hệ thống]
+- [Cách chạy nhanh]
+- [Cấu trúc project]
+- [Kiến trúc hệ thống]
+- [Design Patterns đã áp dụng]
+- [Tính năng]
+- [Chạy Unit Tests]
+- [CI/CD]
+- [Tài khoản mặc định]
 
 ---
-
 ## Yêu cầu hệ thống
-
 | Công cụ | Phiên bản tối thiểu |
 |---------|-------------------|
 | Java JDK | **17** hoặc cao hơn |
 | Maven | **3.8+** |
 | JavaFX | Tự động tải qua Maven |
 | SQLite |
-
 ---
-
 ## Cách chạy nhanh
-
 ### Bước 1 – Clone và build
 
 ```bash
@@ -64,7 +58,7 @@ Mỗi lần mở thêm một cửa sổ mới = thêm một client. Có thể ch
 
 ---
 
-## Cấu trúc project
+# Cấu trúc project
 
 ```
 auction-system/
@@ -183,7 +177,7 @@ auction-system/
 
 ---
 
-## Design Patterns đã áp dụng
+# Design Patterns đã áp dụng
 
 | Pattern | Vị trí | Mô tả |
 |---------|--------|-------|
@@ -195,7 +189,7 @@ auction-system/
 
 ---
 
-## Tính năng
+# Tính năng
 
 ### Bắt buộc ✅
 - Đăng ký / Đăng nhập (3 vai trò: Bidder, Seller, Admin)
@@ -208,7 +202,6 @@ auction-system/
 
 ### Nâng cao ✅
 - **Auto-Bidding:** Đặt maxBid + increment, hệ thống tự bid khi có đối thủ
-- **Anti-Sniping:** Gia hạn 60 giây nếu có bid trong 30 giây cuối
 - **Realtime Update:** Server push qua Socket (Observer Pattern) – không polling
 - **Bid History Chart:** Line chart hiển thị biểu đồ giá theo thời gian thực
 
@@ -228,9 +221,7 @@ mvn -pl server test
 - `AuctionServiceTest` – 10 test cases: tạo đấu giá, đặt giá, concurrent bidding, auto-bid, timeout
 - `UserServiceTest` – 12 test cases: đăng ký, đăng nhập, token, ban user
 - `ModelTest` – OOP hierarchy, Factory, Polymorphism, Anti-sniping
-
 ---
-
 ## CI/CD
 
 File `.github/workflows/ci.yml` tự động:
@@ -239,19 +230,15 @@ File `.github/workflows/ci.yml` tự động:
 3. Publish test results
 4. Build JAR artifacts
 5. Upload server JAR
-
 ---
-
-## Tài khoản mặc định
+# Tài khoản mặc định
 
 | Vai trò | Username | Password |
 |---------|----------|----------|
 | Admin | `admin` | `admin123` |
 
 Tạo thêm tài khoản Bidder/Seller qua màn hình Đăng Ký.
-
 ---
-
 docs: cập nhật README
 refactor: tách NotificationService ra module riêng
 chore: cấu hình CI/CD GitHub Actions
