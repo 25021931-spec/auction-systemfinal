@@ -27,7 +27,7 @@
              style="-fx-background-color: #0f1923;">
 
         <!-- TAB DANG NHAP -->
-        <Tab text="Dang Nhap">
+        <Tab text="Đăng Nhập">
             <VBox alignment="CENTER" spacing="14"
                   style="-fx-background-color: #0f1923; -fx-padding: 36 60 36 60;">
                 <Label text="Chào mừng trở lại"
@@ -46,7 +46,7 @@
                                           -fx-border-color: #2d4a63; -fx-border-radius: 6;
                                           -fx-background-radius: 6; -fx-padding: 10; -fx-font-size: 13;"/>
                 </VBox>
-                <Button text="DANG NHAP" onAction="#handleLogin" maxWidth="Infinity"
+                <Button text="ĐĂNG NHẬP" onAction="#handleLogin" maxWidth="Infinity"
                         style="-fx-background-color: #e8b84b; -fx-text-fill: #0f1923;
                                -fx-font-weight: bold; -fx-font-size: 14; -fx-padding: 12;
                                -fx-background-radius: 6; -fx-cursor: hand;"/>
@@ -56,7 +56,7 @@
         </Tab>
 
         <!-- TAB DANG KY -->
-        <Tab text="Dang Ky">
+        <Tab text="Đăng Kí">
             <VBox alignment="CENTER" spacing="12"
                   style="-fx-background-color: #0f1923; -fx-padding: 28 60 28 60;">
                 <Label text="Tạo tài khoản mới"
@@ -83,13 +83,13 @@
                                       -fx-background-radius: 6; -fx-padding: 10;"/>
                 </VBox>
                 <VBox spacing="5">
-                    <Label text="Vai tro" style="-fx-text-fill: #7a9ab8; -fx-font-size: 12;"/>
+                    <Label text="Vai trò" style="-fx-text-fill: #7a9ab8; -fx-font-size: 12;"/>
                     <ComboBox fx:id="roleCombo" maxWidth="Infinity"
                               style="-fx-background-color: #1a2d3d;
                                      -fx-border-color: #2d4a63; -fx-border-radius: 6;
                                      -fx-background-radius: 6;"/>
                 </VBox>
-                <Button text="DANG KY" onAction="#handleRegister" maxWidth="Infinity"
+                <Button text="Đăng Kí" onAction="#handleRegister" maxWidth="Infinity"
                         style="-fx-background-color: #2d7a4f; -fx-text-fill: white;
                                -fx-font-weight: bold; -fx-font-size: 14; -fx-padding: 12;
                                -fx-background-radius: 6; -fx-cursor: hand;"/>
